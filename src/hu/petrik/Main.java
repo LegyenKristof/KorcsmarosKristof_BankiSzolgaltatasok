@@ -17,5 +17,9 @@ public class Main {
         k1.vasarlas(100);
         System.out.println(h1.getEgyenleg());
 
+        Kartya k2 = h1.ujKartya("3131");
+
+        System.out.println(k2.getSzamla().getEgyenleg());
+
     }
 }

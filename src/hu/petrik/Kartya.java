@@ -14,6 +14,10 @@ public class Kartya extends BankiSzolgaltatas{
         return kartyaSzam;
     }
 
+    public Szamla getSzamla() {
+        return szamla;
+    }
+
     public boolean vasarlas(int osszeg){
         return szamla.kivesz(osszeg);
     }

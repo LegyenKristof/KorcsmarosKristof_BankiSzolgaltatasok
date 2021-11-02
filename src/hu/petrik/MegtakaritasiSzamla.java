@@ -20,6 +20,10 @@ public class MegtakaritasiSzamla extends Szamla {
         }
     }
 
+    public Kartya ujKartya(String kartyaSzam) {
+        return new Kartya(this.getTulajdonos(), kartyaSzam, this);
+    }
+
     public void kamatJovairas(){
         this.egyenleg = (int) (this.egyenleg * (1 + alapertelmezettKamat / 100.0));
     }

@@ -13,6 +13,11 @@ public class HitelSzamla extends Szamla{
     }
 
     @Override
+    public Kartya ujKartya(String kartyaSzam) {
+        return new Kartya(this.getTulajdonos(), kartyaSzam, this);
+    }
+
+    @Override
     public boolean kivesz(int osszeg) {
         if (this.getEgyenleg() - osszeg < this.hitelkeret * (-1)){
             return false;
