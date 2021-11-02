@@ -1,8 +1,8 @@
 package hu.petrik;
 
 public class MegtakaritasiSzamla extends Szamla {
-    private static int alapertelmezettKamat = 12;
-    private int kamat;
+    private static double alapertelmezettKamat = 0.12;
+    private double kamat;
 
     public MegtakaritasiSzamla(Tulajdonos tulajdonos) {
         super(tulajdonos);
@@ -25,14 +25,14 @@ public class MegtakaritasiSzamla extends Szamla {
     }
 
     public void kamatJovairas(){
-        this.egyenleg = (int) (this.egyenleg * (1 + alapertelmezettKamat / 100.0));
+        this.egyenleg = (int) (this.egyenleg * (1 + alapertelmezettKamat));
     }
 
-    public int getKamat() {
+    public double getKamat() {
         return kamat;
     }
 
-    public void setKamat(int kamat) {
+    public void setKamat(double kamat) {
         this.kamat = kamat;
     }
 }

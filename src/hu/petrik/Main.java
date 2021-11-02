@@ -4,22 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Tulajdonos t1 = new Tulajdonos("asd");
-        MegtakaritasiSzamla h1 = new MegtakaritasiSzamla(t1);
+        Tulajdonos t1 = new Tulajdonos("Jancsi");
+        Tulajdonos t2 = new Tulajdonos("Sanyi");
 
-        System.out.println(h1.getEgyenleg());
-        h1.befizet(561);
-        h1.kamatJovairas();
-        System.out.println(h1.getEgyenleg());
+        Bank b1 = new Bank(2);
 
-        Kartya k1 = new Kartya(t1, "5551", h1);
+        b1.szamlaNyitas(t1, 1000);
+        b1.szamlaNyitas(t1, 2000);
 
-        k1.vasarlas(100);
-        System.out.println(h1.getEgyenleg());
+        b1.getSzamlaTomb()[0].befizet(1000);
+        b1.getSzamlaTomb()[1].befizet(3500);
 
-        Kartya k2 = h1.ujKartya("3131");
 
-        System.out.println(k2.getSzamla().getEgyenleg());
 
+        System.out.println(b1.legnagyobbEgyenleguSzamla(t1).getEgyenleg());
+        System.out.println(b1.osszEgyenleg(t1));
+        System.out.println(b1.osszHitelkeret());
     }
 }
