@@ -8,6 +8,10 @@ public class HitelSzamla extends Szamla{
         this.hitelkeret = hitelkeret;
     }
 
+    public int getHitelkeret() {
+        return hitelkeret;
+    }
+
     @Override
     public boolean kivesz(int osszeg) {
         if (this.getEgyenleg() - osszeg < this.hitelkeret * (-1)){
