@@ -12,5 +12,10 @@ public class Main {
         h1.kamatJovairas();
         System.out.println(h1.getEgyenleg());
 
+        Kartya k1 = new Kartya(t1, "5551", h1);
+
+        k1.vasarlas(100);
+        System.out.println(h1.getEgyenleg());
+
     }
 }
